@@ -22,7 +22,7 @@ function Products() {
                         <div className="rounded-xl md:w-auto  md:h-4/6  h-5/6 w-full justify-center  ">
                             <div className="rounded-lg px-1 py-1  bg-black hover:bg-gray-700 flex text-justify justify-center  ">
                                 <button className="text-white md:text-xl underline underline-offset-1 ">
-                                    <Link to="/light">Food and Pellents </Link>
+                                    <Link to="/food">Food and Pellents </Link>
                                 </button>
                             </div>
                         </div>
@@ -46,23 +46,7 @@ function Products() {
                     </div>
 
                 </div>
-                <div className=" border-1  rounded-md">
-                    <div className="p-1  bg-black  rounded-lg  max-w-sm  sm:rounded-lg  ">
-                        <img
-                            className=" object-cover rounded-xl md:w-full  md:h-4/6  h-5/6 w-full    "
-                            alt="plant"
-                            src={Plants}
-                        ></img>
-                        <div className="rounded-xl md:w-auto  md:h-4/6  h-5/6 w-full justify-center  ">
-                            <div className="rounded-lg px-1 py-1  bg-black hover:bg-gray-700 flex text-justify justify-center  ">
-                                <button className="text-white md:text-xl underline underline-offset-1 ">
-                                    <Link to="/plants">Plants </Link>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                
                 <div className=" border-1  rounded-md">
                     <div className="p-1  bg-black  rounded-lg  max-w-sm  sm:rounded-lg  ">
                         <img
@@ -91,6 +75,23 @@ function Products() {
                             <div className="rounded-lg px-1 py-1  bg-black hover:bg-gray-700 flex text-justify justify-center  ">
                                 <button className="text-white md:text-xl underline underline-offset-1 ">
                                     <Link to="/light">Accessories</Link>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div className=" border-1  rounded-md">
+                    <div className="p-1  bg-black  rounded-lg  max-w-sm  sm:rounded-lg  ">
+                        <img
+                            className=" object-cover rounded-xl md:w-full  md:h-4/6  h-5/6 w-full    "
+                            alt="plant"
+                            src={Plants}
+                        ></img>
+                        <div className="rounded-xl md:w-auto  md:h-4/6  h-5/6 w-full justify-center  ">
+                            <div className="rounded-lg px-1 py-1  bg-black hover:bg-gray-700 flex text-justify justify-center  ">
+                                <button className="text-white md:text-xl underline underline-offset-1 ">
+                                    <Link to="/plants">Plants </Link>
                                 </button>
                             </div>
                         </div>

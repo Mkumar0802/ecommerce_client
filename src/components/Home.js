@@ -1,7 +1,7 @@
 import React from "react";
-import Catagories from "./Categories ";
+// import Catagories from "./Categories ";
 import Downbar from "./Downbar";
-import Footer from "./Footer";
+
 
 import Main from "./Main";
 import Offers from "./Offer";
@@ -16,8 +16,7 @@ function Home(){
             <Downbar/>
             <Offers/>
             <Products/>
-            <Footer/>
-            
+           
 
             
         </div>

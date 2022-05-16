@@ -1,10 +1,29 @@
-import React from "react";
-import better from "../Assets/wallpaperbetter.webp"
-import { Link } from "react-router-dom";
 
+import better from "../Assets/wallpaperbetter.webp"
+
+import React, { useEffect } from 'react'
+import { Link } from "react-router-dom";
+import {
+    Nav,
+} from "react-bootstrap";
+
+
+import Dropdown from 'react-bootstrap/Dropdown'
+import { useDispatch, useSelector } from "react-redux";
+
+import { logout } from ".././features/userAction";
 
 function Main() {
+    const dispatch = useDispatch();
 
+    const userLogin = useSelector((state) => state.userLogin);
+    const { userInfo } = userLogin;
+
+    const logoutHandler = () => {
+        dispatch(logout());
+    };
+
+    useEffect(() => { }, [userInfo]);
     return (
         <div>
             <div className=" w-auto bg-gray-500 p-5 flex " >
@@ -14,7 +33,7 @@ function Main() {
                     </h1>
                 </div>
 
-                <div className="md:hidden sm:hidden lg:block justify-start hidden">
+                <div className="md:hidden sm:hidden lg:block justify-start hidden ">
                     <div class="flex  flex-col justify-center ml-96 ">
                         <div class="mb-3 w-96">
                             <div class="input-group relative flex  items-stretch w-full mb-4">
@@ -29,10 +48,44 @@ function Main() {
                     </div>
                 </div>
 
+                <div className="px-10">
+                    <Nav>
+
+
+
+
+
+                        {userInfo ? (
+                            <>
+
+
+
+                                <Dropdown>
+                                    <Dropdown.Toggle variant="primary" id="dropdown-basic  ">
+                                        {`${userInfo.name}`}
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="/profile">Profile</Dropdown.Item>
+                                        <Dropdown.Item onClick={logoutHandler}>Logout</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+
+
+                            </>
+                        ) : (
+                            <div className="  md:text-xl border-2 p-1  rounded-md bg-gray-700 text-white hover:bg-blue-200 hidden md:block ">   <Nav.Link href="/login">Login</Nav.Link></div>
+                        )}
+                    </Nav>
+                </div>
+                <div className="mx-auto text-white sm:text-xl  md:text-2xl">
+                    <Link to="/cart"><ion-icon name="cart-outline"></ion-icon></Link>
+                </div>
+
             </div>
             <div className="w-full h-full" >
                 <img src={better} alt="muthukumar" />
-                
+
             </div>
 
         </div>
