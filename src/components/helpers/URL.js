@@ -1,1 +1,1 @@
-export const  URLDevelopment = 'http://localhost:4000/'
+export const  URLDevelopment = 'https://ecommerce-api-kmk.herokuapp.com/'
